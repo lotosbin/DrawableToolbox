@@ -1,9 +1,9 @@
 package top.defaults.drawabletoolboxapp
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,7 +12,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val list = findViewById<RecyclerView>(R.id.drawableSpecList)
-        val layoutManager = LinearLayoutManager(this)
+        val layoutManager =
+            LinearLayoutManager(this)
         list.layoutManager = layoutManager
         val adapter = DrawableSpecAdapter(samples(this))
         list.adapter = adapter
