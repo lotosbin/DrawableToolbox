@@ -5,6 +5,7 @@ android {
     namespace "top.defaults.drawabletoolbox"
 
     defaultConfig {
+        //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 27
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'

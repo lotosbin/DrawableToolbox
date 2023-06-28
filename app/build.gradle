@@ -5,6 +5,7 @@ android {
     namespace "top.defaults.drawabletoolboxapp"
     defaultConfig {
         applicationId "top.defaults.drawabletoolboxapp"
+        //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
