@@ -12,7 +12,8 @@ buildscript {
     }
 }
 plugins {
-  id "base"
+    id "base"
+    id 'maven-publish'
 }
 allprojects {
     repositories {
