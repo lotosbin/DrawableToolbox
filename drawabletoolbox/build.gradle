@@ -1,33 +1,11 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
-ext {
-    bintrayRepo = 'Hong'
-    bintrayName = 'drawabletoolbox'
-
-    publishedGroupId = 'com.github.duanhong169'
-    artifact = 'drawabletoolbox'
-
-    libraryName = 'DrawableToolbox'
-    libraryDescription = 'The missing DrawableToolbox for Android'
-    libraryVersion = '1.0.7'
-
-    gitUrl = 'https://github.com/duanhong169/DrawableToolbox.git'
-    siteUrl = 'https://github.com/duanhong169/DrawableToolbox'
-
-    licenseName = 'Apache License 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
-
 android {
-    compileSdkVersion 27
+    namespace "top.defaults.drawabletoolbox"
 
     defaultConfig {
-        minSdkVersion 14
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -42,16 +20,9 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
-repositories {
-    mavenCentral()
-}
-
-apply from: 'https://raw.githubusercontent.com/duanhong169/bintray-gradle/master/bintray.gradle'
